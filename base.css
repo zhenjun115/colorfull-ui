@@ -1,0 +1,18 @@
+span.text-label {
+    font-size: 14px;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+span.text-label.sale {
+    background: #fabc3c;
+}
+
+span.text-label.hot {
+    background: #f02200;
+}
+
+span.text-label.new {
+    background: #73eef5;
+}
