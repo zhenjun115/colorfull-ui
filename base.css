@@ -1,3 +1,4 @@
+/*text label*/
 span.text-label {
     font-size: 14px;
     color: white;
@@ -15,4 +16,57 @@ span.text-label.hot {
 
 span.text-label.new {
     background: #73eef5;
+}
+
+/*progress*/
+.progress-bar {
+    width:      300px;
+    height:     5px;
+    background: #ddd;
+    position: relative;
+}
+
+.progress-bar:before {
+    content: ' ';
+    height: 5px;
+    width: 30px;
+    background: #73EEF5;
+    position: absolute;
+}
+
+.progress-bar:after {
+    content: ' ';
+    height: 17px;
+    width: 17px;
+    background: #73EEF5;
+    position: absolute;
+    border-radius: 50%;
+    left: 32px;
+    top: -6px;
+    box-shadow: 1px 1px 5px; 
+}
+
+/*timing progress*/
+.timing-progress {
+    position: relative;
+    width: 300px;
+}
+
+.timing-progress > .progress-bar:before, .timing-progress > .progress-bar:after {
+    background: #F02200;
+}
+
+.timing-progress:before {
+    content: '0:23';
+    color: #F02200;
+    position: absolute;
+    bottom: 5px;
+}
+
+.timing-progress:after {
+    content: '2:54';
+    color: #515151;
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
 }
