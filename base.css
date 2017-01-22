@@ -18,6 +18,40 @@ span.text-label.new {
     background: #73eef5;
 }
 
+/*sale size label*/
+ul.sale-size {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+}
+
+ul.sale-size > li {
+    width: 30px;
+    height: 30px;
+    background: #ddd;
+    margin: 3px;
+    float: left;
+}
+
+ul.sale-size > li > a {
+    color: black;
+    text-decoration: none;
+    margin: 0 auto;
+    line-height: 30px;
+}
+
+ul.sale-size > li.active {
+    background: #73eef5;
+    box-shadow: 1px 1px 5px gray;
+}
+
+ul.sale-size > li.active > a {
+    color: white;
+}
+
+
 /*progress*/
 .progress-bar {
     width:      300px;
