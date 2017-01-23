@@ -104,3 +104,152 @@ ul.sale-size > li.active > a {
     bottom: 5px;
     right: 0px;
 }
+
+/*redefined form input*/
+input.colorfull-ui {
+    -webkit-appearance: none;
+}
+
+input[type='radio'].colorfull-ui {
+    position: relative;
+    width: 14px;
+    height: 14px;
+}
+
+input[type='radio'].colorfull-ui:before {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    top: 2.5px;
+    left: 2.5px;
+    background: #73eef5; 
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+input[type='radio'].colorfull-ui:after {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px;
+}
+
+/*checked*/
+input.colorfull-ui.checked {
+    -webkit-appearance: none;
+}
+
+input[type='radio'].colorfull-ui.checked {
+    position: relative;
+    width: 14px;
+    height: 14px;
+}
+
+input[type='radio'].colorfull-ui.checked:before {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    top: 2.5px;
+    left: 2.5px;
+    background: #5a6bd4; 
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+input[type='radio'].colorfull-ui.checked:after {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background: #73eef5;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px;
+}
+
+/*input checkbox*/
+input[type='checkbox'].colorfull-ui {
+    width: 41px;
+    height: 24px;
+    border: 1px solid #dfdfdf;
+    background: #dfdfdf;
+    border-radius: 16px;
+}
+
+input[type='checkbox'].colorfull-ui:before {
+    content: '';
+    width: 39px;
+    height: 22px;
+    background: #fdfdfd;
+    position: absolute;
+    border-radius: 15px;
+    -webkit-transition: -webkit-transform 0.3s;
+}
+
+input[type='checkbox'].colorfull-ui:after {
+    content: " ";
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 15px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba( 0, 0, 0, 0.4 ); 
+    -webkit-transition: -webkit-transform 0.3s;
+}
+
+input[type='checkbox'].colorfull-ui:checked {
+    background-color: #04be02; 
+    border-color: #04be02;
+}
+
+input[type='checkbox'].colorfull-ui:checked:after {
+    -webkit-transform: translateX(17px);
+}
+
+input[type='checkbox'].colorfull-ui:checked:before {
+    -webkit-transform: scale(0);
+}
+
+/*email*/
+input[type='email'].colorfull-ui.email {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #ddd;
+    padding-left: 7px;
+}
+
+input[type='email'].colorfull-ui.email.valid {
+    border: 2px solid #73eef5; 
+}
+
+/*input number*/
+input.colorfull-ui.number {
+    position: relative;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #DDD;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+input.colorfull-ui.number::before {
+    content: '+';
+    font-size: 14px;
+    color: black;
+    position: absolute;
+}
+
+input.colorfull-ui.number::after {
+    content: '+';
+    font-size: 14px;
+    color: black;
+    position: absolute;
+}
