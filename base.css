@@ -263,3 +263,85 @@ select.colorfull-ui {
     border-radius: 5px;
     font-size: 15px;
 }
+
+/*base tags*/
+span.tag {
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+span.tag.tag-free {
+    font-size: 14px;
+    color: black;
+    position: relative;
+}
+
+span.tag.tag-free > .icon.icon-circle {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    margin-right: 21px;
+}
+
+span.tag.tag-free > .icon.icon-circle::before {
+    content: ' ';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #ddd;
+}
+
+span.tag.tag-free > .icon.icon-circle::after {
+    content: ' ';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 5px;
+    top: 2.5px;
+    border-radius: 50%;
+    background: #73eef5;
+}
+
+/*tag like*/
+span.tag.tag-like > .icon.icon-like {
+    margin-right: 2px;
+}
+
+/*tag star*/
+span.tag.tag-stars > .icon.icon-star {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+/*tag calendar*/
+span.tag.tag-calendar {
+    color: #73eef5;
+}
+
+/*tag done*/
+span.tag.tag-done {
+    color: #73eef5;
+    font-size: 17px;
+    border-bottom: 3px solid #73eef5;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 5px;
+}
+
+/*tag cart*/
+span.tag.tag-cart,span.tag.tag-checkout, span.tag.tag-shipping{
+    position: relative;
+}
+
+span.tag.tag-cart::after,  span.tag.tag-checkout::after, span.tag.tag-shipping::after{
+    content: ' ';
+    position: absolute;
+    width: 200px;
+    height: 3px;
+    background: #ddd;
+    top: 50%;
+    margin-top: -1.5px;
+    margin-left: 7px;
+}
