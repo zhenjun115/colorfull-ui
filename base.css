@@ -51,6 +51,46 @@ ul.sale-size > li.active > a {
     color: white;
 }
 
+ul.ellipsis > li {
+    color: #DDD;
+    float: left;
+    margin-left: 7px;
+}
+
+/*justify-bar*/
+.justify-bar {
+    width:      300px;
+    height:     5px;
+    background: #ddd;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.justify-bar:before {
+    content: ' ';
+    height: 17px;
+    width: 17px;
+    background: #73EEF5;
+    position: absolute;
+    border-radius: 50%;
+    left: 32px;
+    top: -6px;
+    box-shadow: 1px 1px 5px; 
+}
+
+.justify-bar:after {
+    content: ' ';
+    height: 17px;
+    width: 17px;
+    background: #73EEF5;
+    position: absolute;
+    border-radius: 50%;
+    left: 248px;
+    top: -6px;
+    box-shadow: 1px 1px 5px; 
+}
+
 
 /*progress*/
 .progress-bar {
@@ -58,6 +98,8 @@ ul.sale-size > li.active > a {
     height:     5px;
     background: #ddd;
     position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .progress-bar:before {
@@ -107,7 +149,17 @@ ul.sale-size > li.active > a {
 
 /*redefined form input*/
 input.colorfull-ui {
+    appearance: none;
     -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type='text'].colorfull-ui {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding-left: 7px;
 }
 
 input[type='radio'].colorfull-ui:not(.single-checkbox) {
@@ -121,8 +173,8 @@ input[type='radio'].colorfull-ui:not(.single-checkbox)::before {
     position: absolute;
     width: 7px;
     height: 7px;
-    top: 2.5px;
-    left: 2.5px;
+    top: 3.5px;
+    left: 3.5px;
     background: #73eef5; 
     border-radius: 50%;
     z-index: 1000;
@@ -131,8 +183,8 @@ input[type='radio'].colorfull-ui:not(.single-checkbox)::before {
 input[type='radio'].colorfull-ui:not(.single-checkbox):after {
     content: '';
     position: absolute;
-    width: 13px;
-    height: 13px;
+    width: 14px;
+    height: 14px;
     background: white;
     border-radius: 50%;
     box-shadow: 1px 1px 5px;
@@ -154,8 +206,8 @@ input[type='radio'].colorfull-ui.checked:before {
     position: absolute;
     width: 7px;
     height: 7px;
-    top: 2.5px;
-    left: 2.5px;
+    top: 3.5px;
+    left: 3.5px;
     background: #5a6bd4; 
     border-radius: 50%;
     z-index: 1000;
@@ -164,8 +216,8 @@ input[type='radio'].colorfull-ui.checked:before {
 input[type='radio'].colorfull-ui.checked:after {
     content: '';
     position: absolute;
-    width: 13px;
-    height: 13px;
+    width: 14px;
+    height: 14px;
     background: #73eef5;
     border-radius: 50%;
     box-shadow: 1px 1px 5px;
@@ -230,28 +282,58 @@ input[type='email'].colorfull-ui.email.valid {
 }
 
 /*input number*/
-input.colorfull-ui.number {
-    position: relative;
-    width: 200px;
+.input-group > input.colorfull-ui.number {
+    width: 140px;
     height: 30px;
-    border: 1px solid #DDD;
-    border-radius: 15px;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    border-left: 1px solid #DDD;
+    border-right: 0px;
     text-align: center;
     font-size: 16px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 
-input.colorfull-ui.number::before {
-    content: '+';
-    font-size: 14px;
+.input-group > span.number-plus {
     color: black;
-    position: absolute;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
-input.colorfull-ui.number::after {
-    content: '+';
-    font-size: 14px;
+.input-group > span.number-minus {
     color: black;
-    position: absolute;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: 0px;
+}
+
+/*input visa*/
+
+.input-group.visa > input.colorfull-ui {
+    width: 200px;
+    height: 30px;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    border-left: 1px solid #DDD;
+    border-right: 0px;
+    font-size: 16px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.input-group.visa > span.icon {
+    min-width: 50px;
+    color: black;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 0px;
 }
 
 /*input single checkbox*/
@@ -287,21 +369,101 @@ input[type='checkbox'].colorfull-ui.single-checkbox:checked::before {
     background: #73eef5;
 }
 
+/*submit*/
+input[type='submit'].colorfull-ui {
+    width:300px;
+    height: 40px;
+    background: #5A6BD4;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+}
+
+input[type='submit'].info.colorfull-ui {
+    width:300px;
+    height: 40px;
+    background: #73EEF5;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+}
 
 /*select*/
 select.colorfull-ui {
-    width: 200px;
+    min-width: 70px;
     height: 30px;
+    line-height: 30px;
     background: white;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 15px;
+    padding: 7px;
+    position: relative;
+}
+
+
+select.big.colorfull-ui {
+    width: 200px;
+    height: 35px;
+}
+
+/*input-group*/
+.input-group {
+    display: inline-table;
+}
+
+.input-group > .icon {
+    width: 30px;
+    display: table-cell;
+    border: 1px solid #ddd;
+    border-top-right-radius:5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.input-group > .icon.big.primary {
+    width: 60px;
+    color: white;
+    background: #5A6BD4;
+}
+
+
+.input-group > input.colorfull-ui {
+    display: table-cell;
+    border-right: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.input-group > input[type='text'].info.colorfull-ui {
+    text-align: center;
+    vertical-align: middle;
 }
 
 /*base tags*/
 span.tag {
     margin-left: 7px;
     margin-right: 7px;
+}
+
+/*tag text*/
+span.tag.tag-text {
+    position: relative;
+}
+
+span.tag.tag-text > .icon.info {
+    color: #73eef5;
+}
+
+/*tag icon*/
+span.tag.tag-icon.info {
+    color: #5A6BD4;
+}
+
+span.tag.tag-icon.primary {
+    color: #73EEF5;
 }
 
 /*tag free*/
@@ -373,6 +535,14 @@ span.tag.tag-like > .icon.icon-like {
 span.tag.tag-stars > .icon.icon-star {
     margin-left: 3px;
     margin-right: 3px;
+    color: #ddd;
+}
+
+span.tag.tag-stars > .icon.icon-star.active {
+    margin-left: 3px;
+    margin-right: 3px;
+    color: #ddd;
+    color: #FABC3C;
 }
 
 /*tag calendar*/
@@ -390,21 +560,53 @@ span.tag.tag-done {
     padding-bottom: 5px;
 }
 
-/*tag cart*/
-span.tag.tag-cart, span.tag.tag-checkout, span.tag.tag-shipping{
-    position: relative;
+
+/*tag time*/
+div.time {
+    display: inline-block;
+    height: 30px;
+    min-width: 60px;
+    line-height: 30px;
+    color: white;
+    background: #515151;
+    border-radius: 5px;
+    font-style: normal;
+    text-align: center;
 }
 
-span.tag.tag-cart::after,  span.tag.tag-checkout::after, span.tag.tag-shipping::after{
-    content: ' ';
-    position: absolute;
+/*other tag*/
+span.tag.tag-anchor {
+    color: #73eef5;
+}
+
+span.tag.tag-anchor > i.icon { 
+    font-size: 20px;
+}
+
+span.tag.tag-normal > i.icon { 
+    font-size: 20px;
+}
+
+span.tag.tag-attach-file {
+    color: #73eef5;
+}
+
+
+/*tag with divider*/
+.tag-with-divider {
+    display: inline-block;
+    position:  relative;
+}
+
+.tag-with-divider > .divider {
+    display: inline-block;
     width: 200px;
     height: 3px;
     background: #ddd;
-    top: 50%;
-    margin-top: -1.5px;
-    margin-left: 7px;
+    position: relative;
+    vertical-align: middle;
 }
+
 
 /*social social-twitter*/
 span.social {
@@ -484,6 +686,7 @@ button.media.media-square-play > i.icon {
     border: 0px;
     border-radius: 5px;
     box-shadow: 0px 0px 0px;
+    background: #DDD;
 }
 
 .btn > span.icon {
@@ -510,6 +713,10 @@ button.media.media-square-play > i.icon {
     background: #73EEF5;
 }
 /*btn-group*/
+.btn-group {
+    display: inline-block;
+}
+
 .btn-group > .btn{
     margin-left: 0px;
     margin-right: 0px;
@@ -536,3 +743,92 @@ button.media.media-square-play > i.icon {
     content: ' ';
     clear: both;
 }
+
+/*status*/
+.login-status {
+    display: inline-block;
+    min-width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background: #73EEF5;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.login-status > span.icon {
+    position: absolute;
+    left: 10px;
+}
+
+.login-status > span.user {
+    margin-left: 7px;
+}
+
+.login-status.inactive {
+    background: white;
+    color: #ddd;
+    border: 1px solid #ddd;
+}
+
+.login-status.active {
+    background: #73EEF5;
+    color: white;
+}
+
+.share-status {
+    display: inline-block;
+    min-width: 60px;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom:5px;
+    padding-left: 5px;
+    padding-right:5px;
+}
+
+.share-status > .icon {
+    margin-right: 15px;
+}
+
+.share-status.info {
+    color: white;
+    background: #73EEF5;
+}
+
+.share-status.primary {
+    color: white;
+    background: #5A6BD4;
+}
+
+/*menu th*/
+ul.th {
+    list-style: none;
+    padding: 0px;
+}
+
+ul.th.th-3 > li {
+    width: 15px;
+    height: 3px;
+    background: #ddd;
+    margin: 3px;
+    padding: 0px;
+}
+
+
+ul.th.th-9 {
+    width: 27px;
+}
+
+ul.th.th-9 > li {
+    width: 5px;
+    height: 3px;
+    background: #ddd;
+    margin: 1px;
+    padding: 0px;
+    border-radius: 2px;
+    float: left;
+}
+
+
