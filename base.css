@@ -166,61 +166,26 @@ input[type='radio'].colorfull-ui:not(.single-checkbox) {
     position: relative;
     width: 14px;
     height: 14px;
-}
-
-input[type='radio'].colorfull-ui:not(.single-checkbox)::before {
-    content: '';
-    position: absolute;
-    width: 7px;
-    height: 7px;
-    top: 3.5px;
-    left: 3.5px;
-    background: #73eef5; 
+    border: 4px solid #F8F8F8;
+    padding: 1px;
+    background: #73eef5;
+    box-shadow: 0.5px 0.5px 1px #ddd;
     border-radius: 50%;
-    z-index: 1000;
 }
 
-input[type='radio'].colorfull-ui:not(.single-checkbox):after {
-    content: '';
-    position: absolute;
+input[type='radio'].colorfull-ui:not(.single-checkbox).checked {
+    position: relative;
     width: 14px;
     height: 14px;
-    background: white;
-    border-radius: 50%;
-    box-shadow: 1px 1px 5px;
+    border: 4px solid #73eef5;
+    background: #5A6BD4;
 }
 
 /*checked*/
 input.colorfull-ui.checked {
+    appearance: none;
     -webkit-appearance: none;
-}
-
-input[type='radio'].colorfull-ui.checked {
-    position: relative;
-    width: 14px;
-    height: 14px;
-}
-
-input[type='radio'].colorfull-ui.checked:before {
-    content: '';
-    position: absolute;
-    width: 7px;
-    height: 7px;
-    top: 3.5px;
-    left: 3.5px;
-    background: #5a6bd4; 
-    border-radius: 50%;
-    z-index: 1000;
-}
-
-input[type='radio'].colorfull-ui.checked:after {
-    content: '';
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    background: #73eef5;
-    border-radius: 50%;
-    box-shadow: 1px 1px 5px;
+    -moz-appearance: none;
 }
 
 /*input checkbox*/
@@ -269,12 +234,12 @@ input[type='checkbox'].colorfull-ui:not(.single-checkbox):checked:before {
 
 /*email*/
 input[type='email'].colorfull-ui.email {
-    width: 200px;
+    width: 300px;
     height: 30px;
     border: 1px solid #ddd;
     border-radius: 5px;
     color: #ddd;
-    padding-left: 7px;
+    padding-left: 10px;
 }
 
 input[type='email'].colorfull-ui.email.valid {
@@ -283,11 +248,11 @@ input[type='email'].colorfull-ui.email.valid {
 
 /*input number*/
 .input-group > input.colorfull-ui.number {
-    width: 140px;
+    width: 80px;
     height: 30px;
     border-top: 1px solid #DDD;
     border-bottom: 1px solid #DDD;
-    border-left: 1px solid #DDD;
+    border-left: 0px;
     border-right: 0px;
     text-align: center;
     font-size: 16px;
@@ -299,17 +264,26 @@ input[type='email'].colorfull-ui.email.valid {
     color: black;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-left: 0px;
+    border-right: 1px solid #DDD;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    padding-right: 7px;
 }
 
 .input-group > span.number-minus {
     color: black;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     border-right: 0px;
+    border-left: 1px solid #DDD;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    padding-left: 7px;
 }
 
 /*input visa*/
@@ -392,14 +366,17 @@ input[type='submit'].info.colorfull-ui {
 
 /*select*/
 select.colorfull-ui {
-    min-width: 70px;
-    height: 30px;
-    line-height: 30px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    min-width: 85px;
+    height: 35px;
     background: white;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 7px;
     position: relative;
+    padding-left: 7px;
 }
 
 
@@ -416,7 +393,6 @@ select.big.colorfull-ui {
 .input-group > .icon {
     width: 30px;
     display: table-cell;
-    border: 1px solid #ddd;
     border-top-right-radius:5px;
     border-bottom-right-radius: 5px;
     text-align: center;
@@ -440,6 +416,22 @@ select.big.colorfull-ui {
 .input-group > input[type='text'].info.colorfull-ui {
     text-align: center;
     vertical-align: middle;
+}
+
+.input-group > p.colorfull-ui.info {
+    display: table-cell;
+    height: 35px;
+    min-width: 200px;
+    line-height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #DDD;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: 0px;
+    box-shadow: 0.5px 0.5px 1px #DDD;
 }
 
 /*base tags*/
@@ -715,16 +707,15 @@ button.media.media-square-play > i.icon {
 /*btn-group*/
 .btn-group {
     display: inline-block;
+    position: relative;
 }
 
 .btn-group > .btn{
     margin-left: 0px;
     margin-right: 0px;
-}
-
-.btn-group > .btn {
     border-radius: 0px;
     float: left;
+    position: relative;
 }
 
 .btn-group > .btn:first-child {
@@ -739,10 +730,7 @@ button.media.media-square-play > i.icon {
     border-left: 1px solid #ddd;
 }
 
-.btn-group:after {
-    content: ' ';
-    clear: both;
-}
+
 
 /*status*/
 .login-status {

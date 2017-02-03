@@ -6,12 +6,11 @@
 
 .container > .row {
     margin-top: 7px;
-    margin-bottom: 7px;
 }
 
 .container > .row > .element {
     display: inline-block;
-    margin: 15px 7px;
+    margin: 7px 7px;
 }
 
 .container > .row > .element:first-child {
