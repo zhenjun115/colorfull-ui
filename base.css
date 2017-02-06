@@ -327,6 +327,10 @@ input[type='radio'].colorfull-ui.single-checkbox:checked::before {
     background: #73eef5;
 }
 
+input[type='radio'].colorfull-ui.single-checkbox {
+}
+
+
 input[type='checkbox'].colorfull-ui.single-checkbox {
     font: normal normal normal 14px/1 FontAwesome;
     font-size: 18px;
@@ -395,8 +399,15 @@ select.big.colorfull-ui {
     display: table-cell;
     border-top-right-radius:5px;
     border-bottom-right-radius: 5px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
     text-align: center;
     vertical-align: middle;
+}
+
+.input-group > .icon.primary {
+    border: 0px;
 }
 
 .input-group > .icon.big.primary {
@@ -818,5 +829,3 @@ ul.th.th-9 > li {
     border-radius: 2px;
     float: left;
 }
-
-
