@@ -243,13 +243,13 @@ input.colorfull-ui.checked {
     background: #73eef5;
 }
 
-.form-control.checkbox > .icon.close {
+.form-control.checkbox.checked > .icon.close {
     right: 5px;
     top: 5px;
     color: white;
 }
 
-.form-control.checkbox > .icon.circle {
+.form-control.checkbox.checked > .icon.circle {
     left: 5px;
     top: 5px;
     color: white;
