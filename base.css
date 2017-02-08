@@ -374,7 +374,30 @@ input[type='email'].colorfull-ui.email.valid {
 }
 
 /*input single checkbox*/
-input[type='radio'].colorfull-ui.single-checkbox:not(checked) {
+.form-control.radio {
+    position: relative;
+}
+.form-control.radio > .icon {
+    position: absolute;
+    margin-left: -15px;
+    display: none;
+}
+
+.form-control.radio > input[type='radio'].colorfull-ui:not(checked) {
+    width: 15px;
+    height: 15px;
+    background: #ddd;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.form-control.radio > input[type='radio'].colorfull-ui:checked + .icon.check {
+    display: inline-block;
+}
+
+.form-control.radio > input[type='radio'].colorfull-ui:not(checked) > .icon {
     width: 14px;
     height: 14px;
     background: #ddd;
@@ -384,11 +407,46 @@ input[type='radio'].colorfull-ui.single-checkbox:not(checked) {
     border-radius: 0px;
 }
 
-input[type='radio'].colorfull-ui.single-checkbox:checked {
-    background: black;
+/*checkbox*/
+.form-control.single-checkbox {
+    position: relative;
 }
 
-input[type='checkbox'].colorfull-ui.single-checkbox:not(checked) {
+.form-control.single-checkbox > .icon {
+    position: absolute;
+    margin-left: -15px;
+    display: none;
+}
+
+.form-control.single-checkbox > input[type='checkbox'].colorfull-ui {
+    width: 15px;
+    height: 15px;
+    background: #ddd;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.form-control.single-checkbox > input[type='checkbox'].colorfull-ui:checked + .icon.check {
+    display: inline-block;
+}
+
+.form-control.single-checkbox > input[type='checkbox'].colorfull-ui:not( checked ) + .icon.check {
+    display: none;
+}
+
+/*.form-control.single-checkbox > input[type='checkbox'].colorfull-ui > .icon {
+    width: 14px;
+    height: 14px;
+    background: #ddd;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+} */
+
+/*.form-control.radio > input[type='checkbox'].colorfull-ui:not(checked) {
     width: 14px;
     height: 14px;
     background: #ddd;
@@ -399,7 +457,7 @@ input[type='checkbox'].colorfull-ui.single-checkbox:not(checked) {
 
 input[type='checkbox'].colorfull-ui.single-checkbox:checked {
     background: black;
-}
+} */
 
 /*submit*/
 input[type='submit'].colorfull-ui {
