@@ -2,10 +2,12 @@
     background: white;
     border-radius: 5px;
     box-shadow: 0px 0px 1px black;
+    display: inline-block;
 }
 
 .container > .row {
     margin-top: 7px;
+    display: block;
 }
 
 .container > .row > .element {
